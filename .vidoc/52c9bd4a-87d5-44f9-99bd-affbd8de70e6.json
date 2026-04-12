@@ -1,0 +1,35 @@
+{
+    "id": "52c9bd4a-87d5-44f9-99bd-affbd8de70e6.mp4",
+    "metadata": {
+        "focusInformation": {
+            "currentSelection": {
+                "text": "",
+                "from": {
+                    "lineIndex": 52,
+                    "charIndex": 32,
+                    "lineContent": "<!-- Ende des HTML-Dokuments -->"
+                },
+                "to": {
+                    "lineIndex": 52,
+                    "charIndex": 32,
+                    "lineContent": "<!-- Ende des HTML-Dokuments -->"
+                }
+            },
+            "currentlyOpenedFileRelativeFilePath": "/c:/Users/CC-Student/Documents/mein-portfolio/index.html",
+            "cursorPosition": {
+                "lineIndex": 52,
+                "charIndex": 32,
+                "lineContent": "<!-- Ende des HTML-Dokuments -->"
+            }
+        },
+        "createdAt": "2026-04-12T06:23:28.374Z"
+    },
+    "relativeFilePathMetadata": ".vidoc/52c9bd4a-87d5-44f9-99bd-affbd8de70e6.json",
+    "tmpVideoFilePaths": [
+        ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6.mp4",
+        ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6-1.mp4",
+        ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6-2.mp4",
+        ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6-3.mp4"
+    ],
+    "relativeFilePathToVideo": ".vidoc/52c9bd4a-87d5-44f9-99bd-affbd8de70e6.mp4"
+}
