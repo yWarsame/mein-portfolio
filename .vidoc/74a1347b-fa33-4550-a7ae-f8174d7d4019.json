@@ -1,0 +1,32 @@
+{
+    "id": "74a1347b-fa33-4550-a7ae-f8174d7d4019.mp4",
+    "metadata": {
+        "focusInformation": {
+            "currentSelection": {
+                "text": "",
+                "from": {
+                    "lineIndex": 151,
+                    "charIndex": 58,
+                    "lineContent": ".about-bottom h3 { font-size: 32px; margin-bottom: 20px; }"
+                },
+                "to": {
+                    "lineIndex": 151,
+                    "charIndex": 58,
+                    "lineContent": ".about-bottom h3 { font-size: 32px; margin-bottom: 20px; }"
+                }
+            },
+            "currentlyOpenedFileRelativeFilePath": "/c:/Users/CC-Student/Documents/mein-portfolio/style.css",
+            "cursorPosition": {
+                "lineIndex": 151,
+                "charIndex": 58,
+                "lineContent": ".about-bottom h3 { font-size: 32px; margin-bottom: 20px; }"
+            }
+        },
+        "createdAt": "2026-04-12T11:32:15.080Z"
+    },
+    "relativeFilePathMetadata": ".vidoc/74a1347b-fa33-4550-a7ae-f8174d7d4019.json",
+    "tmpVideoFilePaths": [
+        ".vidoc\\tmp\\74a1347b-fa33-4550-a7ae-f8174d7d4019.mp4"
+    ],
+    "relativeFilePathToVideo": ".vidoc/74a1347b-fa33-4550-a7ae-f8174d7d4019.mp4"
+}
