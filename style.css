@@ -1,36 +1,37 @@
 /* style.css - komplett */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Lädt die Schriftart Poppins von Google */
 
-/* Globaler Reset */
+/* Globaler Reset - entfernt alle Standard-Abstände */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Sanftes Scrollen bei Ankern */
 }
 
 body {
-    background-color: #0f172a;
+    background-color: #0f172a; /* Dunkelblauer Hintergrund */
     font-family: 'Poppins', sans-serif;
 }
 
 /* Header - fixiert oben */
 header {
-    background-color: #1e2a3a;
+    background-color: #1e2a3a; /* Dunkles Blaugrau */
     width: 100%;
     position: fixed; /* Header bleibt oben beim Scrollen */
     top: 0;
     left: 0;
-    z-index: 999; /* Header liegt über allem anderen Content */
+    z-index: 999; /* Header liegt über allem */
     display: flex;
-    justify-content: space-between; /* Logo links, Navigation rechts */
+    justify-content: space-between; /* Logo links, Navi rechts */
     align-items: center;
     padding: 12px 200px;
 }
 
 /* Logo */
 .logo {
-    color: #4ecdc4;
+    color: #4ecdc4; /* Türkis */
     font-size: 28px;
     font-weight: 700;
     text-decoration: none;
@@ -38,22 +39,22 @@ header {
 
 /* Navigationslinks */
 .navigation a {
-    color: #f0f0f0;
+    color: #f0f0f0; /* Helles Grau/Weiß */
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
     margin-left: 40px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Sanfter Übergang beim Hover */
 }
 
-/* Hover-Effekt Navigation */
+/* Hover-Effekt Navigation - wird türkis bei Mauskontakt */
 .navigation a:hover {
     color: #4ecdc4;
 }
 
 /* ===== HERO SECTION =======*/
 .main {
-    min-height: 100vh;
+    min-height: 100vh; /* Ganze Bildschirmhöhe */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,8 +62,8 @@ header {
 }
 
 .main div {
-    text-align: center;
-    max-width: 900px;
+    text-align: center; /* Text zentrieren */
+    max-width: 900px; /* Nicht zu breit auf großen Monitoren */
 }
 
 .main h2 {
@@ -73,13 +74,13 @@ header {
 }
 
 .main h2 span {
-    color: #4ecdc4;
+    color: #4ecdc4; /* Türkise Akzentfarbe für "Fachinformatiker..." */
     font-size: 48px;
     font-weight: 600;
 }
 
 .main h3 {
-    color: #94a3b8;
+    color: #94a3b8; /* Helles Grau */
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 30px;
@@ -93,18 +94,19 @@ header {
     font-weight: 600;
     font-size: 18px;
     padding: 12px 28px;
-    border-radius: 30px;
+    border-radius: 30px; /* Abgerundete Ecken */
     display: inline-block;
     transition: all 0.3s ease;
 }
 
+/* Button-Hover - wird rot und etwas größer */
 .main-btn:hover {
     background-color: #ff6b6b;
     color: white;
     transform: scale(1.05);
 }
 
-/* Social Icons */
+/* Social Icons (GitHub & LinkedIn) */
 .social-icons {
     margin-top: 40px;
 }
@@ -117,13 +119,14 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Icons werden türkis und hüpfen nach oben bei Mauskontakt */
 .social-icons a:hover {
     color: #4ecdc4;
     transform: translateY(-5px);
 }
 
 /* ===== RESPONSIVE ===== */
-/* Tablets */
+/* Tablets (mittlere Bildschirme) */
 @media (max-width: 992px) {
     header {
         padding: 10px 50px;
@@ -146,11 +149,11 @@ header {
     }
 }
 
-/* Handys */
+/* Handys (kleine Bildschirme) */
 @media (max-width: 768px) {
     header {
         padding: 15px 30px;
-        flex-direction: column;
+        flex-direction: column; /* Logo ÜBER der Navigation */
         gap: 15px;
     }
     
