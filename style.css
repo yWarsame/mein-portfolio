@@ -1,0 +1,69 @@
+/* style.css - komplett */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Globaler Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Header - fixiert oben */
+header {
+    background-color: #1e2a3a;
+    width: 100%;
+    position: fixed; /* Header bleibt oben beim Scrollen */
+    top: 0;
+    left: 0;
+    z-index: 999;/* Header liegt über allem anderen Content */
+    display: flex;
+    justify-content: space-between; /* Logo links, Navigation rechts (maximaler Abstand dazwischen) */
+    align-items: center;
+    padding: 12px 200px;
+}
+
+/* Logo */
+.logo {
+    color: #4ecdc4;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Navigationslinks */
+.navigation a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: all 0.3s ease; /* Sanfter Übergang über 0.3 Sekunden */
+}
+
+/* Hover-Effekt */
+.navigation a:hover {
+    color: #4ecdc4;
+    /* Neue Farbe bei Mauskontakt */
+}
+
+/* Responsive: Tablets */
+@media (max-width: 992px) {
+    header {
+        padding: 10px 50px;
+    }
+}
+
+/* Responsive: Handys */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: column;/* Logo ÜBER der Navigation (nicht nebeneinander) */
+        gap: 15px; /* Abstand zwischen Logo und Nav */
+    }
+    
+    .navigation a {
+        margin-left: 0;/* Kein linker Abstand mehr */
+        margin-right: 20px;/* Abstand NACH rechts */
+    }
+}
