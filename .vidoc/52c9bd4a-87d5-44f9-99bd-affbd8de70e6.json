@@ -31,5 +31,6 @@
         ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6-2.mp4",
         ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6-3.mp4"
     ],
-    "relativeFilePathToVideo": ".vidoc/52c9bd4a-87d5-44f9-99bd-affbd8de70e6.mp4"
+    "relativeFilePathToVideo": ".vidoc/52c9bd4a-87d5-44f9-99bd-affbd8de70e6.mp4",
+    "mergedTmpVideoFilePath": ".vidoc\\tmp\\52c9bd4a-87d5-44f9-99bd-affbd8de70e6-4.mp4"
 }

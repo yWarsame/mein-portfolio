@@ -1,53 +1,57 @@
 <!DOCTYPE html>
-<!-- Dokumenttyp: Sagt dem Browser, dass es sich um HTML5 handelt -->
 <html lang="de">
-<!-- Sprache auf Deutsch gesetzt (für Screenreader/SEO) -->
-
 <head>
-    <!-- ===== META-INFORMATIONEN ===== -->
     <meta charset="UTF-8">
-    <!-- Zeichenkodierung UTF-8 (ermöglicht Umlaute/Sonderzeichen) -->
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Für ältere Internet Explorer – zwingt sie zum modernen Modus -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Skaliert die Seite richtig auf Mobilgeräten (Responsive Design) -->
-
-    <!-- ===== EXTERNE RESSOURCEN ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Font Awesome Icons (für Social Media Icons etc.) -->
-
-    <link rel="stylesheet" href="style.css">
-    <!-- Eigene CSS-Datei – hier kommt dein Styling rein -->
-
-    <!-- ===== SEITENTITEL ===== -->
-    <title>Yasin Warsame</title>
-    <!-- Wird im Browser-Tab angezeigt (wichtig für SEO) -->
-</head>
-
-<body>
-    <!-- ===== HEADER / NAVIGATIONSLEISTE ===== -->
-    <header>
-        <!-- Logo-Bereich: Klickbar, führt zur Startseite -->
-        <a href="#" class="logo">Yasin Warsame</a>
-        <!-- # ist ein Platzhalter – später durch echten Link ersetzen -->
-
-        <!-- Navigationsmenü -->
-        <nav class="navigation">
-            <a href="#about">Über mich</a>
-
-            <a href="#projects">Projekten</a>
-
-            <a href="#certificates">Zertifikate</a>
-            
-            <a href="#contact">Kontakt</a>
+    <!-- Für Umlaute (ä, ö, ü) -->
     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Für Handys: richtige Größe -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Icons für GitHub & LinkedIn -->
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Deine eigene CSS-Datei -->
+    
+    <title>Yasin Warsame | Fachinformatiker</title>
+    <!-- Text im Browser-Tab -->
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Yasin Warsame</a>
+        <!-- Logo, # ist noch ein Platzhalter -->
+        
+        <nav class="navigation">
+            <a href="#projects">Projekte</a>
+            <a href="#certificates">Zertifikate</a>
+            <a href="#contact">Kontakt</a>
+            <!-- Springt zu den Bereichen unten auf der Seite -->
         </nav>
     </header>
 
+    <section class="main">
+        <!-- Hauptbereich (Hero Section) -->
+        <div>
+            <h2>Hallo, ich bin Yasin<br><span>Fachinformatiker | für Daten- und Prozessanalyse</span></h2>
+            <!-- <br> = Zeilenumbruch, <span> = andere Farbe -->
+            
+            <h3>Optimierung von Prozessen & datengetriebene Entscheidungen</h3>
+            <!-- Untertitel -->
+            
+            <a href="#projects" class="main-btn">Meine Arbeit ansehen</a>
+            <!-- Button zu den Projekten -->
+            
+            <div class="social-icons">
+                <a href="https://github.com/yWarsame" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <!-- GitHub Icon, öffnet in neuem Tab -->
+                </a>
+                <a href="https://www.linkedin.com/in/yasin-warsame-a17b5a17a" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <!-- LinkedIn Icon, öffnet in neuem Tab -->
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
-<!-- Ende des sichtbaren Bereichs -->
-
 </html>
-<!-- Ende des HTML-Dokuments -->
