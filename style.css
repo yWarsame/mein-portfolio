@@ -1,89 +1,112 @@
-/* style.css - komplett */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-/* Lädt die Schriftart Poppins von Google */
 
-/* Globaler Reset - entfernt alle Standard-Abstände */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* Sanftes Scrollen bei Ankern */
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0f172a; /* Dunkelblauer Hintergrund */
+    background-color: #0f172a;
     font-family: 'Poppins', sans-serif;
+    color: white; /* Standardtextfarbe Weiß */
 }
 
-/* Header - fixiert oben */
 header {
-    background-color: #1e2a3a; /* Dunkles Blaugrau */
+    background-color: #1e2a3a;
     width: 100%;
-    position: fixed; /* Header bleibt oben beim Scrollen */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 999; /* Header liegt über allem */
+    z-index: 999;
     display: flex;
-    justify-content: space-between; /* Logo links, Navi rechts */
+    justify-content: space-between;
     align-items: center;
-    padding: 12px 200px;
+    padding: 20px 10%; /* Flexibleres Padding */
 }
 
-/* Logo */
 .logo {
-    color: #4ecdc4; /* Türkis */
+    color: #4ecdc4;
     font-size: 28px;
     font-weight: 700;
     text-decoration: none;
 }
 
-/* Navigationslinks */
 .navigation a {
-    color: #f0f0f0; /* Helles Grau/Weiß */
+    color: #f0f0f0;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
     margin-left: 40px;
-    transition: all 0.3s ease; /* Sanfter Übergang beim Hover */
+    transition: 0.3s;
 }
 
-/* Hover-Effekt Navigation - wird türkis bei Mauskontakt */
 .navigation a:hover {
     color: #4ecdc4;
 }
 
-/* ===== HERO SECTION =======*/
+/* ===== HERO SECTION ===== */
 .main {
-    min-height: 100vh; /* Ganze Bildschirmhöhe */
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center; /* Zentriert die beiden Hauptblöcke */
+    padding: 100px 10%;
+    gap: 80px;
+}
+
+.foto-container {
+    flex: 1;
+    display: flex;
     justify-content: center;
-    padding: 100px 200px 0 200px;
 }
 
-.main div {
-    text-align: center; /* Text zentrieren */
-    max-width: 900px; /* Nicht zu breit auf großen Monitoren */
+.foto-container img {
+    width: 400px; /* Etwas größer */
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #4ecdc4;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-.main h2 {
-    color: white;
-    font-size: 52px;
+/* RECHTE SEITE: Text-Zentrierung */
+.content {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Horizontale Zentrierung */
+    text-align: center;   /* Textfluss Zentrierung */
+}
+
+/* Name */
+.content h2 {
+    font-size: 64px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: white;
 }
 
-.main h2 span {
-    color: #4ecdc4; /* Türkise Akzentfarbe für "Fachinformatiker..." */
-    font-size: 48px;
-    font-weight: 600;
+.content h2 span {
+    color: #4ecdc4;
 }
 
-.main h3 {
-    color: #94a3b8; /* Helles Grau */
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 30px;
+/* Jobtitel */
+.content h3 {
+    font-size: 32px;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Text */
+.content p {
+    font-size: 20px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 40px;
 }
 
 /* Button */
@@ -92,99 +115,44 @@ header {
     color: #1e2a3a;
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
-    padding: 12px 28px;
-    border-radius: 30px; /* Abgerundete Ecken */
-    display: inline-block;
-    transition: all 0.3s ease;
+    font-size: 22px;
+    padding: 16px 40px;
+    border-radius: 50px;
+    transition: 0.3s ease;
 }
 
-/* Button-Hover - wird rot und etwas größer */
 .main-btn:hover {
     background-color: #ff6b6b;
     color: white;
     transform: scale(1.05);
 }
 
-/* Social Icons (GitHub & LinkedIn) */
+/* Social Icons */
 .social-icons {
     margin-top: 40px;
+    display: flex;
+    gap: 35px;
 }
 
 .social-icons a {
     color: white;
-    font-size: 36px;
-    margin: 0 15px;
-    display: inline-block;
-    transition: all 0.3s ease;
+    font-size: 54px; /* Deutlich größer */
+    transition: 0.3s;
 }
 
-/* Icons werden türkis und hüpfen nach oben bei Mauskontakt */
 .social-icons a:hover {
     color: #4ecdc4;
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 /* ===== RESPONSIVE ===== */
-/* Tablets (mittlere Bildschirme) */
-@media (max-width: 992px) {
-    header {
-        padding: 10px 50px;
-    }
-    
+@media (max-width: 1024px) {
     .main {
-        padding: 80px 50px 0 50px;
+        flex-direction: column; /* Stapelt Foto und Text auf Handys/Tablets */
+        text-align: center;
+        padding-top: 150px;
     }
     
-    .main h2 {
-        font-size: 42px;
-    }
-    
-    .main h2 span {
-        font-size: 36px;
-    }
-    
-    .main h3 {
-        font-size: 20px;
-    }
-}
-
-/* Handys (kleine Bildschirme) */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 30px;
-        flex-direction: column; /* Logo ÜBER der Navigation */
-        gap: 15px;
-    }
-    
-    .navigation a {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-    
-    .main {
-        padding: 120px 20px 0 20px;
-    }
-    
-    .main h2 {
-        font-size: 32px;
-    }
-    
-    .main h2 span {
-        font-size: 26px;
-    }
-    
-    .main h3 {
-        font-size: 18px;
-    }
-    
-    .main-btn {
-        font-size: 16px;
-        padding: 10px 24px;
-    }
-    
-    .social-icons a {
-        font-size: 28px;
-        margin: 0 10px;
-    }
+    .content h2 { font-size: 48px; }
+    .content h3 { font-size: 26px; }
 }
