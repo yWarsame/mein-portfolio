@@ -1,5 +1,7 @@
+/* Schriftart von Google laden */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Grundeinstellungen für die gesamte Seite */
 * {
     margin: 0;
     padding: 0;
@@ -9,18 +11,17 @@
 }
 
 body {
-    background-color: #0f172a;
+    background-color: #0f172a; /* Dunkelblaues Design */
     color: white;
     overflow-x: hidden;
 }
 
-/* Header & Navigation */
+/* Header-Design */
 header {
     background-color: #1e2a3a;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed; 
+    top: 0; left: 0;
     z-index: 999;
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,8 @@ header {
 }
 
 .logo {
-    color: #4ecdc4;
-    font-size: 30px;
+    color: #4ecdc4; /* Türkis */
+    font-size: 32px; /* Etwas größer */
     font-weight: 700;
     text-decoration: none;
 }
@@ -38,17 +39,16 @@ header {
 .navigation a {
     color: #f0f0f0;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px; /* Schrift vergrößert */
     margin-left: 30px;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .navigation a:hover {
     color: #4ecdc4;
 }
 
-/* Hero Section */
+/* Hero Sektion (index.html) */
 .main {
     width: 100%;
     min-height: 100vh;
@@ -59,181 +59,94 @@ header {
     gap: 60px;
 }
 
-.content {
-    flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
+/* Schriftgrößen im Hero-Bereich vergrößert */
+.content h2 { font-size: 85px; font-weight: 700; line-height: 1.1; }
+.content h2 span { color: #4ecdc4; }
+.content h3 { font-size: 38px; color: #94a3b8; margin-bottom: 25px; }
+.content p { font-size: 23px; color: #cbd5e1; line-height: 1.8; max-width: 750px; margin-bottom: 40px; }
 
-.content h2 {
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-.content h2 span {
-    color: #4ecdc4;
-}
-
-.content h3 {
-    font-size: 35px;
-    color: #94a3b8;
-    font-weight: 500;
-    margin-bottom: 25px;
-}
-
-.content p {
-    font-size: 21px;
-    color: #cbd5e1;
-    line-height: 1.8;
-    max-width: 700px;
-    margin-bottom: 40px;
-}
-
+/* Buttons */
 .main-btn {
     background-color: #4ecdc4;
     color: #1e2a3a;
     text-decoration: none;
     font-weight: 600;
-    font-size: 22px;
-    padding: 16px 40px;
+    font-size: 24px; /* Größerer Font für Buttons */
+    padding: 18px 45px;
     border-radius: 50px;
-    transition: 0.3s ease;
+    transition: 0.3s;
     display: inline-block;
 }
 
 .main-btn:hover {
-    background-color: #ff6b6b;
+    background-color: #ff6b6b; 
     color: white;
     transform: scale(1.05);
 }
 
+/* SOCIAL ICONS - Wiederhergestellt wie am Anfang (Groß & Weiß) */
 .social-icons {
-    margin-top: 50px;
+    margin-top: 35px;
     display: flex;
     gap: 35px;
 }
 
 .social-icons a {
-    color: white;
-    font-size: 53px;
-    transition: 0.3s ease;
+    color: white;         /* Icons wieder weiß statt lila */
+    font-size: 48px;      /* Große Icons wie im ersten Bild */
+    transition: 0.3s;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #4ecdc4;
-    transform: translateY(-8px);
+    color: #4ecdc4;       
+    transform: translateY(-5px);
 }
 
-.foto-container {
-    flex: 0.8;
-    display: flex;
-    justify-content: flex-end;
-}
-
+/* Foto-Design */
 .foto-container img {
-    width: 420px;
-    height: auto;
+    width: 450px; /* Leicht vergrößert */
     border-radius: 20px;
     border: 4px solid #4ecdc4;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-/* ===== ÜBER MICH SEKTION ===== */
-.about-section {
-    padding: 100px 10%;
-    background-color: #0f172a;
+/* Unterseiten Design */
+.about-page {
+    padding: 160px 10% 80px 10%; 
+    min-height: 100vh;
 }
 
-.section-title {
-    font-size: 45px;
-    text-align: center;
-    margin-bottom: 50px;
-}
+.section-title { font-size: 55px; text-align: center; margin-bottom: 50px; }
+.section-title span { color: #4ecdc4; }
 
-.section-title span {
-    color: #4ecdc4;
-}
+.about-intro h3 { font-size: 35px; color: #4ecdc4; margin-bottom: 20px; }
+.about-intro p, .about-bottom p { font-size: 23px; line-height: 1.8; color: #cbd5e1; }
 
-.about-intro {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.about-intro h3 {
-    font-size: 30px;
-    color: #4ecdc4;
-    margin-bottom: 20px;
-}
-
-.about-intro p, .about-bottom p {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #cbd5e1;
-}
-
+/* Skill-Cards */
 .toolbox {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin: 60px 0;
 }
 
 .skill-card {
     background-color: #1e2a3a;
-    padding: 40px 30px;
+    padding: 50px 40px;
     border-radius: 20px;
     text-align: center;
-    transition: 0.3s ease;
+    transition: 0.3s;
     border: 1px solid transparent;
 }
 
 .skill-card:hover {
     transform: translateY(-10px);
-    border: 1px solid #4ecdc4;
+    border-color: #4ecdc4;
 }
 
-.skill-card i {
-    font-size: 50px;
-    color: #4ecdc4;
-    margin-bottom: 20px;
-}
+.skill-card i { font-size: 55px; color: #4ecdc4; margin-bottom: 25px; }
+.skill-card h4 { font-size: 28px; margin-bottom: 15px; }
+.skill-card p { font-size: 20px; color: #94a3b8; }
 
-.skill-card h4 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.skill-card p {
-    font-size: 17px;
-    color: #94a3b8;
-}
-
-.about-bottom {
-    background: rgba(78, 205, 196, 0.05);
-    padding: 40px;
-    border-radius: 20px;
-    border-left: 5px solid #4ecdc4;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .content h2 { font-size: 60px; }
-    .foto-container img { width: 350px; }
-}
-
-@media (max-width: 900px) {
-    .main {
-        flex-direction: column-reverse;
-        padding-top: 150px;
-    }
-    .content {
-        align-items: center;
-        text-align: center;
-    }
-    .foto-container { justify-content: center; margin-bottom: 30px; }
-}
+.about-bottom h3 { font-size: 32px; margin-bottom: 20px; }
