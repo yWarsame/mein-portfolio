@@ -6,6 +6,40 @@
     <title>CV & Unterlagen | Yasin Warsame</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-note {
+            background: rgba(78, 205, 196, 0.1);
+            border-left: 4px solid #4ecdc4;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 2rem;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-note i {
+            font-size: 2.5rem;
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+        .secure-badge {
+            background: #10b98120;
+            border: 1px solid #10b981;
+            color: #10b981;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .info-text {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            color: #cbd5e1;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,32 +48,40 @@
             <a href="ueber-mich.html">Über mich</a>
             <a href="projekte.html">Projekte</a>
             <a href="zertifikate.html">Zertifikate</a>
-            <a href="cv.html" style="color: #4ecdc4;">CV</a> <a href="index.html#contact">Kontakt</a>
+            <a href="cv.html" style="color: #4ecdc4;">CV</a>
+            <a href="index.html#contact">Kontakt</a>
         </nav>
     </header>
 
     <section class="about-page">
         <div class="container">
-            <h2 class="section-title">Meine <span>Unterlagen</span></h2>
+            <h2 class="section-title">Bewerbungs<span>unterlagen</span></h2>
             
-            <div class="about-intro">
-                <p>Hier finden Sie meine vollständigen Bewerbungsunterlagen zum Anschauen.</p>
+            <div class="info-text">
+                <p>Aus Datenschutzgründen werden Lebenslauf und Anschreiben nicht öffentlich bereitgestellt.</p>
+                <p><strong>Bei Interesse sende ich Ihnen die Unterlagen gerne auf Anfrage direkt per E-Mail zu.</strong></p>
             </div>
 
-            <div class="toolbox">
-                <div class="skill-card">
-                    <i class="fas fa-file-user"></i>
-                    <h4>Lebenslauf</h4>
-                    <p>Detaillierter Werdegang und technische Expertise.</p>
-                    <a href="https://drive.google.com/drive/u/0/folders/1n8Upli4mdDWH1a1zVn1XpIII0yL0zT8K" target="_blank" class="main-btn">Anschauen</a>
-                </div>
+            <div class="contact-note">
+                <i class="fas fa-lock"></i>
+                <h3>📄 Lebenslauf & Anschreiben <span class="secure-badge"><i class="fas fa-shield-alt"></i> Datenschutz</span></h3>
+                <p>Lebenslauf und Anschreiben werden aus Datenschutzgründen</p>
+                <p>nicht öffentlich bereitgestellt.</p>
+                <br>
+                <a href="index.html#contact" class="main-btn" style="background: #4ecdc4; color: #0f172a;">
+                    <i class="fas fa-envelope"></i> Kontakt aufnehmen
+                </a>
+                <p style="font-size: 0.75rem; margin-top: 1rem; color: #94a3b8;">
+                    <i class="fas fa-info-circle"></i> Auf Anfrage sende ich Ihnen die Unterlagen gerne direkt per E-Mail zu.
+                </p>
+            </div>
 
-                <div class="skill-card">
-                    <i class="fas fa-file-alt"></i>
-                    <h4>Anschreiben</h4>
-                    <p>Motivation und Ziele für mein Praktikum.</p>
-                    <a href="https://drive.google.com/drive/u/0/folders/1n8Upli4mdDWH1a1zVn1XpIII0yL0zT8K" target="_blank" class="main-btn" style="font-size: 14px; padding: 10px 20px;">Anschauen</a>
-                </div>
+            <div style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #64748b;">
+                <i class="fas fa-database"></i> Projekt-Daten & Analysen sind öffentlich einsehbar – persönliche Dokumente geschützt.
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html" class="main-btn">Zurück zur Startseite</a>
             </div>
         </div>
     </section>

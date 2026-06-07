@@ -6,6 +6,50 @@
     <title>Über mich | Yasin Warsame</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Zusätzliche kleine Verbesserungen für die About-Seite */
+        .dashboard-icon {
+            color: #4ecdc4;
+            margin-left: 8px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(78, 205, 196, 0.15);
+            border-radius: 50%;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .dashboard-icon:hover {
+            transform: scale(1.15);
+            background: rgba(78, 205, 196, 0.3);
+            box-shadow: 0 0 8px rgba(78, 205, 196, 0.5);
+        }
+        .about-bottom ul {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .about-bottom li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(78, 205, 196, 0.1);
+            padding: 12px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #4ecdc4;
+            margin-bottom: 12px;
+        }
+        .about-bottom li i {
+            color: #4ecdc4;
+            font-size: 1.4rem;
+            width: 32px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,7 +71,10 @@
                 <h3>Datenversteher mit technischem Fundament</h3>
                 <p>
                     Ich bin <strong>Fachinformatiker für Daten- und Prozessanalyse</strong> (in Umschulung). 
-                    Mein Fokus liegt darauf, Geschäftsprozesse durch präzise Datenanalyse zu durchleuchten...
+                    Mein Fokus liegt darauf, Geschäftsprozesse durch präzise Datenanalyse zu durchleuchten 
+                    <a href="dashboard-beispiel.html" target="_blank" class="dashboard-icon" title="Dashboard-Beispiel ansehen">
+                        <i class="fas fa-chart-line"></i>
+                    </a>
                 </p>
             </div>
 
@@ -51,11 +98,24 @@
 
             <div class="about-bottom">
                 <h3>Was mich auszeichnet</h3>
-                <p>
-                    Durch mein dreijähriges Informatikstudium an der Universität Kairo besitze ich ein starkes 
-                    theoretisches Fundament. Meine mehrjährige Berufserfahrung in der Logistik und im 
-                    Sicherheitsbereich hat mich zudem gelehrt, präzise und teamorientiert zu arbeiten.
-                </p>
+                <ul style="list-style: none; max-width: 700px; margin: 0 auto;">
+                    <li>
+                        <i class="fas fa-graduation-cap"></i>
+                        <span><strong>Studium der Informatik (Computer Science)</strong> – Universität Kairo</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-briefcase"></i>
+                        <span><strong>Langjährige Berufserfahrung</strong> in verschiedenen Branchen</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        <span><strong>Bewusste Neuorientierung:</strong> Daten- & Prozessanalyse</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <span><strong>Stärken:</strong> analytisch, diszipliniert, teamorientiert</span>
+                    </li>
+                </ul>
             </div>
             
             <div style="text-align: center; margin-top: 50px;">

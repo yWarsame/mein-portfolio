@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte | Yasin Warsame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .projects-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid rgba(78, 205, 196, 0.2);
+            transition: all 0.3s ease;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #4ecdc4;
+            box-shadow: 0 15px 30px -12px rgba(78, 205, 196, 0.2);
+        }
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .project-icon {
+            font-size: 2.5rem;
+            color: #4ecdc4;
+        }
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+        .status-badge {
+            background: #10b98120;
+            border: 1px solid #10b981;
+            color: #10b981;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+        }
+        .project-subtitle {
+            font-size: 1rem;
+            color: #4ecdc4;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+        .tech-badge {
+            background: rgba(78, 205, 196, 0.15);
+            color: #4ecdc4;
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .dashboard-image {
+            margin: 1.5rem 0;
+            text-align: center;
+            cursor: pointer;
+        }
+        .dashboard-image img {
+            max-width: 100%;
+            border-radius: 16px;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dashboard-image img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.2);
+        }
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat-card {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid #4ecdc4;
+        }
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #4ecdc4;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+        .process-steps {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .process-steps h4 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .process-steps ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .process-steps li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+        .process-steps li i {
+            color: #4ecdc4;
+            width: 24px;
+        }
+        .recommendations {
+            background: rgba(78, 205, 196, 0.05);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .recommendations h4 {
+            color: #4ecdc4;
+            margin-bottom: 0.8rem;
+        }
+        .rec-item {
+            margin: 0.8rem 0;
+            padding-left: 1.2rem;
+            border-left: 2px solid #4ecdc4;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .project-btn {
+            background: transparent;
+            border: 1px solid #4ecdc4;
+            color: #4ecdc4;
+            padding: 10px 22px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .project-btn:hover {
+            background: #4ecdc4;
+            color: #0f172a;
+            transform: scale(1.02);
+        }
+        .back-btn {
+            text-align: center;
+            margin-top: 50px;
+        }
+        hr {
+            border-color: rgba(78, 205, 196, 0.2);
+            margin: 1rem 0;
+        }
+        /* Modal für Bild-Vergrößerung */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            cursor: pointer;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 5%;
+            border-radius: 12px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close-modal:hover {
+            color: #4ecdc4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Yasin Warsame</a>
+        <nav class="navigation">
+            <a href="ueber-mich.html">Über mich</a>
+            <a href="projekte.html" style="color: #4ecdc4;">Projekte</a>
+            <a href="zertifikate.html">Zertifikate</a>
+            <a href="cv.html">CV</a>
+            <a href="index.html#contact">Kontakt</a>
+        </nav>
+    </header>
+
+    <section class="about-page">
+        <div class="container">
+            <h2 class="section-title">Mein <span>Projekt</span></h2>
+            
+            <div class="about-intro">
+                <p>Im Rahmen meiner Weiterbildung zum Fachinformatiker für Daten- und Prozessanalyse habe ich folgende Fallstudie durchgeführt.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-bicycle project-icon"></i>
+                        <span class="project-title">Cyclistic Bike-Share Case Study</span>
+                        <span class="status-badge"><i class="fas fa-check-circle"></i> Abgeschlossen</span>
+                    </div>
+                    <div class="project-subtitle">How does a bike-share navigate speedy success?</div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fab fa-python"></i> Python / Pandas</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> SQL / MySQL</span>
+                        <span class="tech-badge"><i class="fas fa-chart-line"></i> Grafana</span>
+                        <span class="tech-badge"><i class="fas fa-file-excel"></i> Excel</span>
+                    </div>
+
+                    <!-- DASHBOARD BILD AUS images/ordner -->
+                    <div class="dashboard-image" id="dashboardImg">
+                        <img src="images/dashboard.png" alt="Grafana Dashboard - Cyclistic Bike-Share Analyse" style="width: 100%; border-radius: 16px;">
+                        <p style="font-size: 0.8rem; color: #4ecdc4; margin-top: 8px;">
+                            <i class="fas fa-search-plus"></i> Klicken zum Vergrößern
+                        </p>
+                    </div>
+
+                    <!-- Dashboard Stats -->
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">489.554</div>
+                            <div class="stat-label">Gesamtfahrten</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15,1 min</div>
+                            <div class="stat-label">⌀ Fahrzeit</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">23,7 h</div>
+                            <div class="stat-label">Max. Fahrzeit</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">1 min</div>
+                            <div class="stat-label">Min. Fahrzeit</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">64% / 36%</div>
+                            <div class="stat-label">Member / Casual</div>
+                        </div>
+                    </div>
+
+                    <!-- Process Steps -->
+                    <div class="process-steps">
+                        <h4><i class="fas fa-tasks"></i> Meine Arbeitsschritte</h4>
+                        <ul>
+                            <li><i class="fas fa-database"></i> <strong>Datenbank-Design:</strong> Erstellung einer MySQL-Datenbank mit 13 Spalten für über 500.000 Datensätze</li>
+                            <li><i class="fas fa-broom"></i> <strong>Datenbereinigung (Python/Pandas):</strong> Entfernung von Ausreißern (Fahrten < 1 Min. & > 24 Std.), Behandlung von Fehlwerten</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Analyse & Visualisierung:</strong> Berechnung von Ride Length, Day of Week, Hourly Patterns – Visualisierung mit Grafana</li>
+                            <li><i class="fas fa-lightbulb"></i> <strong>Handlungsempfehlungen:</strong> Ableitung von 3 Marketing-Strategien zur Konvertierung von Gelegenheitsnutzern</li>
+                        </ul>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h4><i class="fas fa-chalkboard-user"></i> Meine Empfehlungen</h4>
+                        <div class="rec-item"><strong>📅 Weekend-Only Membership:</strong> Spezielles Wochenend-Abo für Freizeitfahrer (Peak an Samstagen & Sonntagen)</div>
+                        <div class="rec-item"><strong>☀️ Summer Seasonal Pass (Mai-Oktober):</strong> Saisonale Mitgliedschaft für warme Monate</div>
+                        <div class="rec-item"><strong>👨‍👩‍👧‍👦 Family/Groups Package:</strong> Gruppenrabatte für Familien und Freundesgruppen (längere Fahrten bei Casual)</div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/14XeeGOTkl39qA5iVxQv7PF1jUN3US2uS/view?usp=drive_link" target="_blank" class="project-btn">
+                            <i class="fab fa-python"></i> Python Code
+                        </a>
+                        <a href="https://drive.google.com/file/d/1uRA-fcSNxeEe1SUDx0YXM-PWIxu86tEo/view?usp=drive_link" target="_blank" class="project-btn">
+                            <i class="fas fa-file-pdf"></i> Case Study PDF
+                        </a>
+                    </div>
+                    
+                    <hr>
+                    <p style="font-size: 0.75rem; color: #64748b; text-align: center; margin-top: 0.5rem;">
+                        <i class="fas fa-chart-simple"></i> Visualisiert mit Grafana: Mitglieder vs. Gelegenheitsnutzer | Fahrradtypen | Fahrten pro Stunde/Wochentag | Durchschnittliche Fahrzeiten
+                    </p>
+                </div>
+            </div>
+            
+            <div class="back-btn">
+                <a href="index.html" class="main-btn">Zurück zur Startseite</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal für Bild-Vergrößerung -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Bild-Vergrößerung Modal
+        const dashboardImg = document.getElementById('dashboardImg');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close-modal');
+
+        dashboardImg.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = "images/dashboard.png";
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
