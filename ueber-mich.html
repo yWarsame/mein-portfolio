@@ -7,47 +7,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Zusätzliche kleine Verbesserungen für die About-Seite */
-        .dashboard-icon {
+        .about-bottom {
+            text-align: center;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+        .feature-card {
+            background: rgba(78, 205, 196, 0.08);
+            border-radius: 24px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(78, 205, 196, 0.15);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(78, 205, 196, 0.15);
+            border-color: #4ecdc4;
+        }
+        .feature-card i {
+            font-size: 2.5rem;
             color: #4ecdc4;
-            margin-left: 8px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+        .feature-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #f1f5f9;
+        }
+        .feature-card p {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+        .strength-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .strength-badge {
+            background: rgba(78, 205, 196, 0.15);
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            background: rgba(78, 205, 196, 0.15);
-            border-radius: 50%;
-            text-decoration: none;
-            vertical-align: middle;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            border: 1px solid rgba(78, 205, 196, 0.3);
         }
-        .dashboard-icon:hover {
-            transform: scale(1.15);
-            background: rgba(78, 205, 196, 0.3);
-            box-shadow: 0 0 8px rgba(78, 205, 196, 0.5);
-        }
-        .about-bottom ul {
-            list-style: none;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .about-bottom li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(78, 205, 196, 0.1);
-            padding: 12px 20px;
-            border-radius: 12px;
-            border-left: 4px solid #4ecdc4;
-            margin-bottom: 12px;
-        }
-        .about-bottom li i {
+        .strength-badge i {
             color: #4ecdc4;
-            font-size: 1.4rem;
-            width: 32px;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -56,9 +74,9 @@
         <a href="index.html" class="logo">Yasin Warsame</a>
         <nav class="navigation">
             <a href="ueber-mich.html" style="color: #4ecdc4;">Über mich</a>
-            <a href="index.html#projects">Projekte</a>
-            <a href="index.html#certificates">Zertifikate</a>
-            <a href="images/lebenslauf.pdf" target="_blank">CV</a>
+            <a href="projekte.html">Projekte</a>
+            <a href="zertifikate.html">Zertifikate</a>
+            <a href="cv.html">CV</a>
             <a href="index.html#contact">Kontakt</a>
         </nav>
     </header>
@@ -71,10 +89,7 @@
                 <h3>Datenversteher mit technischem Fundament</h3>
                 <p>
                     Ich bin <strong>Fachinformatiker für Daten- und Prozessanalyse</strong> (in Umschulung). 
-                    Mein Fokus liegt darauf, Geschäftsprozesse durch präzise Datenanalyse zu durchleuchten 
-                    <a href="dashboard-beispiel.html" target="_blank" class="dashboard-icon" title="Dashboard-Beispiel ansehen">
-                        <i class="fas fa-chart-line"></i>
-                    </a>
+                    Mein Fokus liegt darauf, Geschäftsprozesse durch präzise Datenanalyse zu durchleuchten und zu optimieren.
                 </p>
             </div>
 
@@ -98,24 +113,30 @@
 
             <div class="about-bottom">
                 <h3>Was mich auszeichnet</h3>
-                <ul style="list-style: none; max-width: 700px; margin: 0 auto;">
-                    <li>
-                        <i class="fas fa-graduation-cap"></i>
-                        <span><strong>Studium der Informatik (Computer Science)</strong> – Universität Kairo</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-briefcase"></i>
-                        <span><strong>Langjährige Berufserfahrung</strong> in verschiedenen Branchen</span>
-                    </li>
-                    <li>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-university"></i>
+                        <h4>Informatik-Studium (Kairo)</h4>
+                        <p>Akademisches Denken, logische Analyse & fundamentale Grundkenntnisse</p>
+                    </div>
+                    <div class="feature-card">
                         <i class="fas fa-chart-line"></i>
-                        <span><strong>Bewusste Neuorientierung:</strong> Daten- & Prozessanalyse</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-users"></i>
-                        <span><strong>Stärken:</strong> analytisch, diszipliniert, teamorientiert</span>
-                    </li>
-                </ul>
+                        <h4>Verschiedene Branchen</h4>
+                        <p>Querdenken. Prozesse verstehen. Verbessern.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Fachinformatiker Daten- & Prozessanalyse</h4>
+                        <p>Meine Zukunft. Selbstbestimmt. Digital.</p>
+                    </div>
+                </div>
+
+                <div class="strength-badges">
+                    <span class="strength-badge"><i class="fas fa-brain"></i> analytisch</span>
+                    <span class="strength-badge"><i class="fas fa-clock"></i> diszipliniert</span>
+                    <span class="strength-badge"><i class="fas fa-users"></i> teamorientiert</span>
+                </div>
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
